@@ -124,6 +124,9 @@ section {
 .nav-item:hover .nav-link{
 	color: #368EEF !important;
 }
+.nav-item.no-border:hover .nav-link{
+	color: black !important;
+}
 .nav-item.active:after{
 	position: absolute;
 	bottom: 0;
@@ -135,6 +138,10 @@ section {
 	opacity: 1;
     transition: all 200ms linear;
 }
+.nav-item.no-border:after{
+	position: inherit;
+}
+
 .nav-item.active .nav-link{
 	color: #777 !important;
 }
@@ -553,6 +560,9 @@ body.dark .logo img {
   padding: 80px;
 }
 
+.card{
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
 .search-form {
   /* position: relative;
   top: 50%;
@@ -782,4 +792,16 @@ footer */
     letter-spacing: .002em;
     line-height: 17px;
     margin: 0;
+}
+
+#detailKost a {
+	text-decoration: none;
+	color: inherit;
+}
+.breadcrumb-item {
+	color: grey;
+}
+
+.breadcrumb-item.active {
+	color: #000;
 }

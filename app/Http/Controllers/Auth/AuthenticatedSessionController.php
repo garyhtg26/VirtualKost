@@ -19,6 +19,10 @@ class AuthenticatedSessionController extends Controller
     {
         return view('auth.login2');
     }
+    public function createDashboard(): View
+    {
+        return view('auth.login');
+    }
 
     /**
      * Handle an incoming authentication request.
@@ -30,6 +34,15 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
 
         return redirect()->intended(RouteServiceProvider::HOME);
+    }
+
+    public function storeDashboard(LoginRequest $request): RedirectResponse
+    {
+        $request->authenticate();
+
+        $request->session()->regenerate();
+
+        return redirect()->intended(RouteServiceProvider::DASHBOARD);
     }
 
     /**

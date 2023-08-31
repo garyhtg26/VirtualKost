@@ -561,7 +561,19 @@ body.dark .logo img {
 }
 
 .card{
+	justify-content: center;
+	border-color: white;
 	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.label-all {
+	background-color:#4B4B4B;
+	border-color:#4B4B4B;
+	font-weight: 600;
+}
+
+.label-star{
+	background-color: #FFF9DD;border-color: #FFF9DD;font-weight: 600;
 }
 .search-form {
   /* position: relative;
@@ -804,4 +816,8 @@ footer */
 
 .breadcrumb-item.active {
 	color: #000;
+}
+
+iframe {
+	border-radius: 20px !important;
 }

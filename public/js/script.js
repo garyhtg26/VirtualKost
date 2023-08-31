@@ -65,3 +65,7 @@
         next = next.nextElementSibling
     }
 })
+
+
+    myVid=document.getElementsByTagName("iframe");
+    myVid.muted=true;

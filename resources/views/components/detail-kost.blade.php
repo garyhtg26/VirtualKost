@@ -15,16 +15,17 @@
                     <div class="col-md-6 col-sm-12"> 
                         <span class="badge text-bg-success">Verified</span>
                         <h1>Kost Andromeda Menteng Residence</h1>
-                        <p>Type : A</p>
+                        <p><span class="me-2" style="color:grey">Type :</span><b> A</b></p>
                         <p>Jl. Menteng Raya No.21, RT.1/RW.10, Kb. Sirih, Kec. Menteng, Jakarta Pusat</p>
-                        <div class="d-flex" style="gap:10px">
-                            <div class="btn btn-secondary">All</div>
-                            <div class="btn btn-warning">4.5</div>
-                            <div class="card card-location"><p><i class="fa-solid fa-location-dot ms-2 me-2"></i>See on Maps</p></div>
+                        <div class="d-flex mt-4" style="gap:10px">
+                            <div class="btn btn-secondary label-all">All</div>
+                            <div class="btn btn-warning label-star"><img src="img/star.svg" class="me-2">4.5</div>
+                            <div class="card card-location px-2"><a class="px-2"><img class="me-2" src="img/location-dot.svg">See on Maps</a></div>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <div id="sSeajnM1P"><script type="text/javascript" async data-short="sSeajnM1P" data-path="tours" data-is-self-hosted="false" width="100%" height="500px" src="https://app.cloudpano.com/public/shareScript.js"></script></div>
+                        {{-- <div id="sSeajnM1P"><script type="text/javascript" async data-short="sSeajnM1P" data-path="tours" data-is-self-hosted="false" width="100%" height="500px" src="https://app.cloudpano.com/public/shareScript.js"></script></div> --}}
+                        <div id="MMqLrAhy2oN"><script type="text/javascript" async data-short="MMqLrAhy2oN" data-path="tours" data-is-self-hosted="false" width="100%" height="500px" src="https://app.cloudpano.com/public/shareScript.js"></script></div>
                     </div>
               </div>
         </div>

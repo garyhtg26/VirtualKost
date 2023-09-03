@@ -20,6 +20,13 @@ Route::get('/', function () {
 Route::get('/kost-detail', function () {
     return view('components.detail-kost');
 });
+Route::get('/search', function () {
+    return view('components.search');
+});
+
+Route::get('/help-center', function () {
+    return view('components.help-center');
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

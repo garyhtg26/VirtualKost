@@ -9,7 +9,7 @@
                         <input type="search" value="" placeholder="Location" class="search-input">
                         <img class="location-icon" src="img/loc-icon.svg">
                     </form>
-                    <button class="btn btn-blue">Search</button>
+                    <button onclick="window.location='{{ url("search") }}'" class="btn btn-blue">Search</button>
                 </div>
                 <div class="container-image col-md-6 col-sm-12">
                     <img src="img/banner1.png" width="80%" style="float: right">
@@ -32,7 +32,17 @@
         </section>
         <section id="product">
             <div class="container">
-                <div class="ms-2">Recommendation: <b>Monas</b></div>
+                <div class="d-flex" style="justify-content: space-between;">
+                    <div class="ms-2">Recommendation: <b>Monas</b></div>
+                    <div class="d-flex" style="gap: 10px; margin-right:5%">
+                        <a class="carousel-control-prev bg-transparent w-aut slider-nav" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                            <img src="img/arrow-left.svg">
+                        </a>
+                        <a class="carousel-control-next bg-transparent w-aut slider-nav" href="#recipeCarousel" role="button" data-bs-slide="next">
+                            <img src="img/arrow-right.svg">
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="container my-3">
                 <div class="row mx-auto my-auto justify-content-center">
@@ -40,7 +50,7 @@
                         <div class="carousel-inner" role="listbox">
                             <div class="carousel-item active">
                                 <div class="col-md-3">
-                                    <div class="card-kost">
+                                    <div class="card-kost" onclick="window.location='{{ url("kost-detail") }}'">
                                         <div class="card-img">
                                             <img src="img/kost1.png" class="img-fluid">
                                         </div>
@@ -94,7 +104,7 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="col-md-3">
-                                    <div class="card-kost">
+                                    <div class="card-kost" onclick="window.location='{{ url("kost-detail") }}'">
                                         <div class="card-img">
                                             <img src="img/kost3.png" class="img-fluid">
                                         </div>
@@ -121,7 +131,7 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="col-md-3">
-                                    <div class="card-kost">
+                                    <div class="card-kost" onclick="window.location='{{ url("kost-detail") }}'">
                                         <div class="card-img">
                                             <img src="img/kost1.png" class="img-fluid">
                                         </div>
@@ -148,7 +158,7 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="col-md-3">
-                                    <div class="card-kost">
+                                    <div class="card-kost" onclick="window.location='{{ url("kost-detail") }}'">
                                         <div class="card-img">
                                             <img src="img/kost2.png" class="img-fluid">
                                         </div>
@@ -175,7 +185,7 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="col-md-3">
-                                    <div class="card-kost">
+                                    <div class="card-kost" onclick="window.location='{{ url("kost-detail") }}'">
                                         <div class="card-img">
                                             <img src="img/kost3.png" class="img-fluid">
                                         </div>
@@ -201,12 +211,6 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </a>
-                        <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </a>
                     </div>
                 </div>		
             </div>

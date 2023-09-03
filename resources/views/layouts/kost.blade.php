@@ -34,10 +34,10 @@
 									<a class="nav-link" href="{{ url('/') }}">Home</a>
 								</li>
 								<li class="nav-item ps-4 ps-md-0 ms-0 ms-md-4 me-md-4 ">
-									<a class="nav-link" href="#about">About</a>
+									<a class="nav-link" href="/#about">About</a>
 								</li>
 								<li class="nav-item ps-4 ps-md-0 ms-0 ms-md-4 me-md-4 ">
-									<a class="nav-link" href="#">Help</a>
+									<a class="nav-link" href="/help-center">Help</a>
 								</li>
 								{{-- <li class="nav-item ps-4 ps-md-0 ms-0 ms-md-4 me-md-4 ">
 									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Login</a>

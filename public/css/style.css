@@ -624,6 +624,27 @@ body.dark .logo img {
 
   border: 2px solid black;
 }
+
+.btn-white{
+	width: 150px;
+	background-color: none;
+	border: none;
+	outline: none;
+	height: 49px;
+	border-radius: 49px;
+	color: #000;
+	/*text-transform: uppercase;*/
+	font-weight: 600;
+	margin: 10px 0;
+	cursor: pointer;
+	transition: 0.5s;
+	border: 1px solid black;
+  }
+  .btn-white:hover {
+  
+	background-color: #368EEF;
+	color: #fff;
+  }
 .location-icon {
   position: absolute;
   text-align: right;
@@ -751,6 +772,7 @@ footer */
 .card-kost{
 	margin-right: 20px;
 	margin-left: 20px;
+	cursor: pointer;
 }
 
 .card-kost img {
@@ -834,4 +856,155 @@ iframe {
 
 .subtitle-kost {
     font-weight: 600;
+}
+
+.details ul {
+	line-height: 2;
+}
+
+#MMqLrAhy2oN {
+	top: 120px;
+    position: sticky;
+}
+
+
+.carousel-control-next, .carousel-control-prev {
+    position: initial !important;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+
+.slider-nav{
+	align-items: center;
+    border-radius: 100px;
+    box-shadow: 0 -1px 4px rgba(0,0,0,.04), 0 4px 8px rgba(0,0,0,.08);
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    outline: 0;
+    width: 40px;
+}
+
+.search-container{
+	display: flex;
+}
+
+/* help center */
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    outline: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.faq {
+    /* padding: 120px 0 90px; */
+    background: #f7fbff;
+    min-height: 100vh;
+}
+
+.faq .section-title {
+    margin-bottom: 54px;
+}
+
+.faq .section-title h2 {
+    margin-bottom: 22px;
+}
+
+.faq .accordion .card {
+    border: none;
+    margin-bottom: 30px;
+}
+
+.faq .accordion .card:not(:first-of-type) .card-header:first-child {
+    border-radius: 10px;
+}
+
+.faq .accordion .card .card-header {
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+}
+
+.faq .accordion .card .card-header h5 {
+    padding: 0;
+}
+
+.faq .accordion .card .card-header h5 button {
+    color: #1e3056;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0 30px 0 70px;
+    height: 80px;
+    display: block;
+    width: 100%;
+    color: rgba(30, 48, 86, 0.8);
+    text-align: left;
+    background: #fff;
+    -webkit-box-shadow: 0px -50px 140px 0px rgba(69, 81, 100, 0.1);
+    box-shadow: 0px -50px 140px 0px rgba(69, 81, 100, 0.1);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.faq .accordion .card .card-header h5 button:after {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    color: #368EEF;
+    text-align: center;
+    border: 1px solid #368EEF;
+    border-radius: 50%;
+    line-height: 100%;
+    content: '\f067';
+    font-size: 10px;
+    line-height: 18px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.faq .accordion .card .card-header h5 button.collapsed {
+    background: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid rgba(97, 125, 255, 0.2);
+}
+
+.faq .accordion .card .card-header h5 button[aria-expanded="true"]:after {
+    content: '\f068';
+    color: #fff;
+    background-image: -webkit-linear-gradient(-180deg, #5e7eff 0%, #368EEF 30%, #a85fff 100%);
+}
+
+.faq .accordion .card .card-body {
+    -webkit-box-shadow: 0px 15px 140px 0px rgba(69, 81, 100, 0.1);
+    box-shadow: 0px 15px 140px 0px rgba(69, 81, 100, 0.1);
+    border-radius: 0 0 10px 10px;
+    padding-top: 0;
+    margin-top: -6px;
+    padding-left: 72px;
+    padding-right: 70px;
+    padding-bottom: 23px;
+    color: rgba(30, 48, 86, 0.8);
+    line-height: 30px;
 }

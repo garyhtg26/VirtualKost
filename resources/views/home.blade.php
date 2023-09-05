@@ -1,7 +1,7 @@
 <x-kost-layout>
         <section id="jumbotron">
             <div class="container-fluid row" style="padding-right: 0;--bs-gutter-x: 0;">
-                <div class="container-title col-md-6 col-sm-12">
+                <div class="container-title col-md-7 col-sm-12">
                     <h1>Searching for a brand new cozy place ? </h1>
                     <p>Don’t worry, you will find your beloved space
                         here, we search it for you</p>
@@ -11,8 +11,8 @@
                     </form>
                     <button onclick="window.location='{{ url("search") }}'" class="btn btn-blue">Search</button>
                 </div>
-                <div class="container-image col-md-6 col-sm-12">
-                    <img src="img/banner1.png" width="80%" style="float: right">
+                <div class="container-image col-md-5 col-sm-12">
+                    <img src="img/banner1.png" width="90%" style="float: right">
                 </div>
             </div>
         </section>
@@ -212,7 +212,7 @@
                             </div>
                         </div>
                     </div>
-                </div>		
+                </div>
             </div>
         </section>
         <section id="review">
@@ -229,7 +229,7 @@
                                 </div>
                             </div>
                             <div class="testimonial-content mt-3">
-                                “Saya mempercayakan urusan promosi kos Ayana kepada VirtualKost sebagai aplikasi penyedia layanan kos terbesar di Indonesia. Jujur saja, saya sangat terbantu sekali dari segi marketing, operasional, perawatan bangunan kos, dan lainnya. Apalagi terdapat fitur Premium di aplikasi VirtualKost yang membuat pencari kos bisa menemukan kos Ayana dengan mudah.” 
+                                “Saya mempercayakan urusan promosi kos Ayana kepada VirtualKost sebagai aplikasi penyedia layanan kos terbesar di Indonesia. Jujur saja, saya sangat terbantu sekali dari segi marketing, operasional, perawatan bangunan kos, dan lainnya. Apalagi terdapat fitur Premium di aplikasi VirtualKost yang membuat pencari kos bisa menemukan kos Ayana dengan mudah.”
                             </div>
                         </div>
                     </div>
@@ -243,7 +243,7 @@
                                 </div>
                             </div>
                             <div class="testimonial-content mt-3">
-                                “Saya mempercayakan urusan promosi kos Ayana kepada VirtualKost sebagai aplikasi penyedia layanan kos terbesar di Indonesia. Jujur saja, saya sangat terbantu sekali dari segi marketing, operasional, perawatan bangunan kos, dan lainnya. Apalagi terdapat fitur Premium di aplikasi VirtualKost yang membuat pencari kos bisa menemukan kos Ayana dengan mudah.” 
+                                “Saya mempercayakan urusan promosi kos Ayana kepada VirtualKost sebagai aplikasi penyedia layanan kos terbesar di Indonesia. Jujur saja, saya sangat terbantu sekali dari segi marketing, operasional, perawatan bangunan kos, dan lainnya. Apalagi terdapat fitur Premium di aplikasi VirtualKost yang membuat pencari kos bisa menemukan kos Ayana dengan mudah.”
                             </div>
                         </div>
                     </div>
@@ -257,7 +257,7 @@
                                 </div>
                             </div>
                             <div class="testimonial-content mt-3">
-                                “Saya mempercayakan urusan promosi kos Ayana kepada VirtualKost sebagai aplikasi penyedia layanan kos terbesar di Indonesia. Jujur saja, saya sangat terbantu sekali dari segi marketing, operasional, perawatan bangunan kos, dan lainnya. Apalagi terdapat fitur Premium di aplikasi VirtualKost yang membuat pencari kos bisa menemukan kos Ayana dengan mudah.” 
+                                “Saya mempercayakan urusan promosi kos Ayana kepada VirtualKost sebagai aplikasi penyedia layanan kos terbesar di Indonesia. Jujur saja, saya sangat terbantu sekali dari segi marketing, operasional, perawatan bangunan kos, dan lainnya. Apalagi terdapat fitur Premium di aplikasi VirtualKost yang membuat pencari kos bisa menemukan kos Ayana dengan mudah.”
                             </div>
                         </div>
                     </div>

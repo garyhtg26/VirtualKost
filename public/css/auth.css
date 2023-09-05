@@ -67,6 +67,7 @@ form.sign-in-form {
 }
 
 .input-field {
+    overflow: hidden;
   max-width: 380px;
   width: 100%;
   background-color: #f0f0f0;
@@ -440,4 +441,9 @@ form.sign-in-form {
   }
   .fa-linkedin-in{
     color: #0A66C2;
+  }
+
+  .text-red-600 {
+    color: rgb(220 38 38 / 0.8);
+    list-style: none;
   }

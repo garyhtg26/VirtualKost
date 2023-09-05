@@ -16,12 +16,16 @@ Route::middleware('guest')->group(function () {
                 ->name('register');
 
     Route::post('register', [RegisteredUserController::class, 'store']);
+    Route::get('register-dashboard', [RegisteredUserController::class, 'createDashboard'])
+                ->name('register-dashboard');
+
+    Route::post('register-dashboard', [RegisteredUserController::class, 'storeDashboard']);
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
                 ->name('login');
 
     Route::post('login', [AuthenticatedSessionController::class, 'store']);
-    
+
      Route::get('login-dashboard', [AuthenticatedSessionController::class, 'createDashboard'])
                 ->name('login-dashboard');
 

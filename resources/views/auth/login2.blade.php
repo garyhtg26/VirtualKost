@@ -21,10 +21,12 @@
               <i class="fas fa-at"></i>
               <input type="text" placeholder="Email" name="email" required />
             </div>
+            <x-input-error :messages="$errors->get('email')" class="mt-2" />
             <div class="input-field">
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Password" name="password" required />
             </div>
+            <x-input-error :messages="$errors->get('password')" class="mt-2" />
             <input type="submit" value="Login" class="btn solid" />
             <p class="social-text">Or Sign in with social platforms</p>
             <div class="social-media">
@@ -42,7 +44,7 @@
               </a>
             </div>
           </form>
-          <form action="#" class="sign-up-form" method="POST" action="{{ route('register') }}">
+          <form class="sign-up-form" method="POST" action="{{ route('register') }}">
             @csrf
             <h2 class="title">Sign up</h2>
             <div class="input-field">
@@ -107,7 +109,7 @@
             </button>
             <div style="margin-top:5%"></div>
             <a class="back-btn" href="{{ url('/') }}">kembali ke home</a>
-         
+
           </div>
           <img src="img/register.svg" class="image" alt="" />
         </div>

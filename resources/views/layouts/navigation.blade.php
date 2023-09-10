@@ -13,7 +13,14 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('📊 Dashboard') }}
+                    </x-nav-link>
+                    <!-- add this -->
+                    <x-nav-link :href="route('posts.index')" :active="request()->routeIs('posts.index')">
+                        {{'🏚️ Kelola Kost' }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('kosts.index')" :active="request()->routeIs('kosts.index')">
+                        {{'Table Kost' }}
                     </x-nav-link>
                 </div>
             </div>
@@ -69,6 +76,10 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            <!-- add this -->
+            <x-responsive-nav-link :href="route('posts.index')" :active="request()->routeIs('posts.index')">
+                {{ 'Kelola Kost' }}
             </x-responsive-nav-link>
         </div>
 

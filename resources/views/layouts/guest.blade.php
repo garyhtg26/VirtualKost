@@ -12,7 +12,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <link rel="icon" type="image/png" href="{{ asset('img/logo.png') }}">
 
-    
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -23,7 +23,7 @@
                     <x-application-logo class="fill-current text-gray-500" />
                 </a>
             </div>
-            <h2 class="title">Sign in Pemilik Kost</h2>
+            <h2 class="title">{{ Request::routeIs('register') ? 'Register' : 'Login' }} Pemilik Kost</h2>
 
             <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
                 {{ $slot }}

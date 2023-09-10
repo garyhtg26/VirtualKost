@@ -6,10 +6,10 @@
                     <p>Don’t worry, you will find your beloved space
                         here, we search it for you</p>
                     <form class="search-form mt-5 mb-3">
-                        <input type="search" value="" placeholder="Location" class="search-input">
+                        <input type="search" value="" placeholder="Location" id="searchValue" class="search-input">
                         <img class="location-icon" src="img/loc-icon.svg">
                     </form>
-                    <button onclick="window.location='{{ url("search") }}'" class="btn btn-blue">Search</button>
+                    <button id="search" type="submit" class="btn btn-blue">Search</button>
                 </div>
                 <div class="container-image col-md-5 col-sm-12">
                     <img src="img/banner1.png" width="90%" style="float: right">

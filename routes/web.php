@@ -19,12 +19,12 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/kost-detail', function () {
-    return view('components.detail-kost');
-});
-// Route::get('/search', function () {
-//     return view('components.search');
+
+// Route::get('/kost-detail', function () {
+//     return view('components.detail-kost');
 // });
+Route::get('/kost-detail/{id}', [KostController::class, 'detail']);
+
 Route::get('/search', [KostController::class, 'list'])->name('components.search');
 
 Route::get('/help-center', function () {

@@ -38,6 +38,15 @@
                     </div>
                     <div class="mb-6">
                         <h2 class="text-lg font-medium text-gray-900">
+                            {{ 'Kecamatan, Kota Kost' }}
+                        </h2>
+
+                        <p class="mt-1 text-sm text-gray-600">
+                            {{ $kost->kost_city }}
+                        </p>
+                    </div>
+                    <div class="mb-6">
+                        <h2 class="text-lg font-medium text-gray-900">
                             {{ 'Harga Kost' }}
                         </h2>
 
@@ -56,7 +65,7 @@
                     </div>
                     <div class="mb-6">
                         <h2 class="text-lg font-medium text-gray-900">
-                            {{ 'Virtual Embed 360' }}
+                            {{ 'Embed Virtual 360' }}
                         </h2>
 
                         <p class="mt-1 text-sm text-gray-600">
@@ -65,11 +74,11 @@
                     </div>
                     <div class="mb-6">
                         <h2 class="text-lg font-medium text-gray-900">
-                            {{ 'Thumbnail Kost' }}
+                            {{ 'Link Gmaps Location' }}
                         </h2>
 
                         <p class="mt-1 text-sm text-gray-600">
-                            <img class="h-64 w-128" src="{{ Storage::url($kost->thumbnail_image) }}" alt="{{ $kost->kost_title }}" srcset="">
+                            {{ $kost->gmaps_location }}
                         </p>
                     </div>
                     <div class="mb-6">
@@ -79,6 +88,15 @@
 
                         <p class="mt-1 text-sm text-gray-600">
                             {{ $kost->others }}
+                        </p>
+                    </div>
+                    <div class="mb-6">
+                        <h2 class="text-lg font-medium text-gray-900">
+                            {{ 'Thumbnail Kost' }}
+                        </h2>
+
+                        <p class="mt-1 text-sm text-gray-600">
+                            <img class="h-64 w-128" src="{{ Storage::url($kost->thumbnail_image) }}" alt="{{ $kost->kost_title }}" srcset="">
                         </p>
                     </div>
                     <div class="mb-6">

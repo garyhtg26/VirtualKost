@@ -11,6 +11,7 @@ use App\Models\Kost;
 // We will use Form Request to validate incoming requests from our store and update method
 use App\Http\Requests\Kost\StoreRequest;
 use App\Http\Requests\Kost\UpdateRequest;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class KostController extends Controller
 {
@@ -19,6 +20,9 @@ class KostController extends Controller
      */
     public function index(): Response
     {
+        $title = 'Delete User!';
+        $text = "Are you sure you want to delete?";
+        confirmDelete($title, $text);
         return response()->view('kosts.index', [
             'kosts' => Kost::orderBy('updated_at', 'desc')->get(),
         ]);

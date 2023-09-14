@@ -84,6 +84,18 @@
             //window.location.href = "/search";
           });
 
+          $('#search2').click(function(e){
+
+            // localStorage.setItem("content", tempContent);
+            if ($('#searchValue2').val()){
+                localStorage.setItem("search", $('#searchValue2').val());
+                location.reload()
+            } else {
+                alert('Location cannot be empty')
+            }
+            //window.location.href = "/search";
+          });
+
 
         var search = localStorage.getItem("search");
         if (search){

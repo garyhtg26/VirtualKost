@@ -22,14 +22,16 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'kost_title' => 'required|string|min:3|max:250',
+            'kost_title' => 'required|string|min:1|max:250',
             'kost_type' => 'required|string|min:1|max:250',
-            'kost_address' => 'required|string|min:3|max:250',
+            'kost_address' => 'required|string|min:1|max:250',
+            'kost_city' => 'required|string|min:1|max:250',
             'kost_price' => 'required|integer',
-            'kost_facilities' => 'required|string|min:3|max:60000',
-            'virtual_embed' => 'required|string|min:3|max:60000',
-
-            'thumbnail_image' => 'required|image|max:1024|mimes:jpg,jpeg,png',
+            'kost_facilities' => 'required|string|min:1|max:60000',
+            'virtual_embed' => 'required|string|min:1|max:60000',
+            'gmaps_location' => 'required|string|min:1|max:60000',
+            'others' => 'string|min:1|max:60000',
+            'thumbnail_image' => 'required|image|max:2048|mimes:jpg,jpeg,png',
         ];
     }
 }

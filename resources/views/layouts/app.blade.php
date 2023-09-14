@@ -10,6 +10,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
         <!-- Scripts -->
         @vite(['resources/css/main.css', 'resources/js/app.js'])
@@ -41,6 +42,7 @@
                 {{ $slot }}
             </main>
         </div>
+        @include('sweetalert::alert')
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.bundle.min.js"></script>
         <script>
             // All javascript code in this project for now is just for demo DON'T RELY ON IT

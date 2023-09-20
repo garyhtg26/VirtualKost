@@ -20,17 +20,20 @@ class KostController extends Controller
      */
     public function index(): Response
     {
-        $title = 'Delete User!';
-        $text = "Are you sure you want to delete?";
-        confirmDelete($title, $text);
         return response()->view('kosts.index', [
             'kosts' => Kost::orderBy('updated_at', 'desc')->get(),
         ]);
     }
 
-    public function list(): Response
+    public function search(): Response
     {
         return response()->view('components.search', [
+            'kosts' => Kost::orderBy('updated_at', 'desc')->get(),
+        ]);
+    }
+    public function home(): Response
+    {
+        return response()->view('home', [
             'kosts' => Kost::orderBy('updated_at', 'desc')->get(),
         ]);
     }

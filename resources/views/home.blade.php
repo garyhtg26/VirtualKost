@@ -48,6 +48,39 @@
                 <div class="row mx-auto my-auto justify-content-center">
                     <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner" role="listbox">
+                            @if (count($kosts) > 0)
+                            @foreach ($kosts as $kost)
+                            <div class="carousel-item active">
+                                <div class="col-md-3">
+                                    <div class="card-kost mb-4" onclick="window.location='{{ url("/kost-detail/$kost->id") }}'">
+                                        <div class="card-img">
+                                            <img src="{{ isset($kost) ? Storage::url($kost->thumbnail_image) : '' }}" class="img-fluid">
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="kost-info">
+                                                <div class="d-flex flex-column">
+                                                    <span>{{$kost->kost_title}}</span>
+                                                    <span><b>{{$kost->kost_city}}</b></span>
+                                                </div>
+                                            </div>
+                                            <div class="kost-facilities">
+                                                <div class="d-flex">
+                                                    @foreach ( array_slice(explode(",",$kost->kost_facilities), 0, 3) as $facilities)
+                                                    <span>{{$facilities}}</span><span style="padding: 0 2px;">·</span>
+                                                    {{-- <span>WiFi</span><span>·</span>
+                                                    <span>AC</span> --}}
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                            <div class="kost-price">
+                                                <div><b>Rp. {{ number_format($kost->kost_price,0, '.') }}</b> / bulan</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                            @else
                             <div class="carousel-item active">
                                 <div class="col-md-3">
                                     <div class="card-kost" onclick="window.location='{{ url("kost-detail") }}'">
@@ -210,6 +243,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @endif
                         </div>
                     </div>
                 </div>

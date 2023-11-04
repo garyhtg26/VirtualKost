@@ -89,7 +89,8 @@
             // localStorage.setItem("content", tempContent);
             if ($('#searchValue2').val()){
                 localStorage.setItem("search", $('#searchValue2').val());
-                location.reload()
+                window.location.reload()
+
             } else {
                 alert('Location cannot be empty')
             }
@@ -97,11 +98,60 @@
           });
 
 
+      // MAP PART
+      const config = {
+        minZoom: 4,
+        maxZoom: 18,
+      };
+      // magnification with which the map will start
+      const zoom = 15;
+      // coordinates
+      const lat = 0.4764;
+      const lng = 101.3806;
+
+      // calling map
+      const map = L.map("map", config).setView([lat, lng], zoom);
+      map.scrollWheelZoom.disable();
+    map.on('focus', () => { map.scrollWheelZoom.enable(); });
+    map.on('blur', () => { map.scrollWheelZoom.disable(); });
+      var marker = L.marker([0.4764, 101.3806]).addTo(map);
+      // Used to load and display tile layers on the map
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+
         var search = localStorage.getItem("search");
         if (search){
             $('#searchValue2').val(search)
             $('#searchName').html(search)
             console.log(search)
+            if(map){
+                const object = JSON.parse(localStorage.getItem("objectSearch"));
+
+                map.eachLayer(function (layer) {
+                    if (!!layer.toGeoJSON) {
+                      map.removeLayer(layer);
+                    }
+                  });
+
+                  const { display_name } = object.properties;
+                  const [lng, lat] = object.geometry.coordinates;
+                  // custom id for marker
+
+                  const marker = L.circle([lat, lng], {
+                    title: display_name,
+                    color: 'red',
+                    fillColor: '#f03',
+                    fillOpacity: 0.5,
+                    radius: 1000
+                  });
+
+                  marker.addTo(map).bindPopup(display_name);
+
+                  map.setView([lat, lng], 14);
+            }
         }
 
 

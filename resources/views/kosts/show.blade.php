@@ -7,7 +7,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg m-auto" style="width: 50%;">
                 <div class="p-6 text-gray-900">
                     <div class="mb-6">
                         <h2 class="text-lg font-medium text-gray-900">
@@ -38,11 +38,29 @@
                     </div>
                     <div class="mb-6">
                         <h2 class="text-lg font-medium text-gray-900">
-                            {{ 'Kecamatan, Kota Kost' }}
+                            {{ 'Kecamatan' }}
+                        </h2>
+
+                        <p class="mt-1 text-sm text-gray-600">
+                            {{ $kost->kost_subdistrict }}
+                        </p>
+                    </div>
+                    <div class="mb-6">
+                        <h2 class="text-lg font-medium text-gray-900">
+                            {{ 'Kota' }}
                         </h2>
 
                         <p class="mt-1 text-sm text-gray-600">
                             {{ $kost->kost_city }}
+                        </p>
+                    </div>
+                    <div class="mb-6">
+                        <h2 class="text-lg font-medium text-gray-900">
+                            {{ 'Provinsi' }}
+                        </h2>
+
+                        <p class="mt-1 text-sm text-gray-600">
+                            {{ $kost->kost_province }}
                         </p>
                     </div>
                     <div class="mb-6">
@@ -79,6 +97,24 @@
 
                         <p class="mt-1 text-sm text-gray-600">
                             {{ $kost->gmaps_location }}
+                        </p>
+                    </div>
+                    <div class="mb-6">
+                        <h2 class="text-lg font-medium text-gray-900">
+                            {{ 'Longitude' }}
+                        </h2>
+
+                        <p class="mt-1 text-sm text-gray-600">
+                            {{ $kost->longitude }}
+                        </p>
+                    </div>
+                    <div class="mb-6">
+                        <h2 class="text-lg font-medium text-gray-900">
+                            {{ 'Latitude' }}
+                        </h2>
+
+                        <p class="mt-1 text-sm text-gray-600">
+                            {{ $kost->latitude }}
                         </p>
                     </div>
                     <div class="mb-6">

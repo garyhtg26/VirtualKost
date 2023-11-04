@@ -16,11 +16,15 @@ return new class extends Migration
             $table->string('kost_title');
             $table->string('kost_type');
             $table->string('kost_address');
+            $table->string('kost_subdistrict');
             $table->string('kost_city');
+            $table->string('kost_province');
             $table->integer('kost_price');
             $table->text('kost_facilities');
             $table->text('virtual_embed');
             $table->text('gmaps_location');
+            $table->decimal('latitude', 10, 8);
+            $table->decimal('longitude', 11, 8);
             $table->text('thumbnail_image');
             $table->text('others')->nullable();
             $table->timestamps();

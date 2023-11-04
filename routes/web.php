@@ -23,6 +23,10 @@ Route::get('/', [KostController::class, 'home'])->name('home');
 // Route::get('/kost-detail', function () {
 //     return view('components.detail-kost');
 // });
+
+Route::get('/testing', function () {
+    return view('testing');
+});
 Route::get('/kost-detail/{id}', [KostController::class, 'detail']);
 
 Route::get('/search', [KostController::class, 'search'])->name('components.search');

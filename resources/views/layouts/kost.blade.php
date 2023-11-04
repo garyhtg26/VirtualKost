@@ -11,8 +11,8 @@
 
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link rel="icon" type="image/png" href="{{ asset('img/logo.png') }}">
-
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomickigrzegorz/autocomplete@1.8.6/dist/css/autocomplete.min.css"/>
 </head>
 <body class="hero-anime">
 
@@ -139,37 +139,12 @@
       </div>
     </div>
   </div>
-
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tomickigrzegorz/autocomplete@1.8.6/dist/js/autocomplete.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/maps.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
+
 </body>
 </html>
-
-
-{{-- <div class="section full-height">
-    <div class="absolute-center">
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-            <h1><span>B</span><span>o</span><span>o</span><span>t</span><span>s</span><span>t</span><span>r</span><span>a</span><span>p</span> <span>4</span><br>
-            <span>m</span><span>e</span><span>n</span><span>u</span></h1>
-            <p>scroll for nav animation</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section mt-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div id="switch">
-                            <div id="circle"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}

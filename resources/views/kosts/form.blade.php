@@ -8,7 +8,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg m-auto" style="width: 50%;">
                 <div class="p-6 text-gray-900">
                     {{-- don't forget to add multipart/form-data so we can accept file in our form --}}
                     <form method="post" action="{{ isset($kost) ? route('kosts.update', $kost->id) : route('kosts.store') }}" class="mt-6 space-y-6" enctype="multipart/form-data">
@@ -35,13 +35,21 @@
                             <x-text-input id="kost_address" name="kost_address" type="text" class="mt-1 block w-full" :value="$kost->kost_address ?? old('kost_address')" required autofocus />
                             <x-input-error class="mt-2" :messages="$errors->get('kost_address')" />
                         </div>
-
                         <div>
-                            <x-input-label for="kost_city" value="Kecamatan, Kota Kost" />
+                            <x-input-label for="kost_subdistrict" value="Kecamatan" />
+                            <x-text-input id="kost_subdistrict" name="kost_subdistrict" type="text" class="mt-1 block w-full" :value="$kost->kost_subdistrict ?? old('kost_subdistrict')" required autofocus />
+                            <x-input-error class="mt-2" :messages="$errors->get('kost_subdistrict')" />
+                        </div>
+                        <div>
+                            <x-input-label for="kost_city" value="Kota/Kabupaten" />
                             <x-text-input id="kost_city" name="kost_city" type="text" class="mt-1 block w-full" :value="$kost->kost_city ?? old('kost_city')" required autofocus />
                             <x-input-error class="mt-2" :messages="$errors->get('kost_city')" />
                         </div>
-
+                        <div>
+                            <x-input-label for="kost_province" value="Provinsi" />
+                            <x-text-input id="kost_province" name="kost_province" type="text" class="mt-1 block w-full" :value="$kost->kost_province ?? old('kost_province')" required autofocus />
+                            <x-input-error class="mt-2" :messages="$errors->get('kost_province')" />
+                        </div>
                         <div>
                             <x-input-label for="kost_price" value="Harga Kost Per Bulan" />
                             <x-text-input id="kost_price" name="kost_price" type="number" class="mt-1 block w-full" :value="$kost->kost_price ?? old('kost_price')" required autofocus />
@@ -64,6 +72,16 @@
                             <x-input-label for="gmaps_location" value="Link Gmaps Location" />
                             <x-text-input id="gmaps_location" placeholder="cth. https://goo.gl/maps/xhwb6Ze29CZktdvc8" name="gmaps_location" type="text" class="mt-1 block w-full" :value="$kost->gmaps_location ?? old('gmaps_location')" required autofocus />
                             <x-input-error class="mt-2" :messages="$errors->get('gmaps_location')" />
+                        </div>
+                        <div>
+                            <x-input-label for="longitude" value="longitude (N/S)" />
+                            <x-text-input id="longitude" placeholder="cth. 0.4764" name="longitude" type="text" class="mt-1 block w-full" :value="$kost->longitude ?? old('longitude')" required autofocus />
+                            <x-input-error class="mt-2" :messages="$errors->get('longitude')" />
+                        </div>
+                        <div>
+                            <x-input-label for="latitude" value="latitude (E/W)" />
+                            <x-text-input id="latitude" placeholder="cth. 101.3806" name="latitude" type="text" class="mt-1 block w-full" :value="$kost->latitude ?? old('latitude')" required autofocus />
+                            <x-input-error class="mt-2" :messages="$errors->get('latitude')" />
                         </div>
                         <div>
                             <x-input-label for="others" value="Others" />

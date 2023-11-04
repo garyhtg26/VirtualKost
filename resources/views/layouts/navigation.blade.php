@@ -19,7 +19,7 @@
                     {{-- <x-nav-link :href="route('posts.index')" :active="request()->routeIs('posts.index')">
                         {{'📝 Kelola Post' }}
                     </x-nav-link> --}}
-                    <x-nav-link :href="route('kosts.index')" :active="request()->routeIs('kosts.index')">
+                    <x-nav-link :href="route('kosts.index')" :active="request()->routeIs('kosts.index','kosts.show','kosts.create','kosts.edit')">
                         {{'🏚️ Kelola Kost' }}
                     </x-nav-link>
                 </div>

@@ -5,14 +5,14 @@
             <div class="search-header">
                 <div class="search-container mb-4">
                     <form class="search-form  mb-3" style="width: 100%;">
-                        <input type="search" id="searchValue2" class="search-input">
+                        <input name="searchValue2" type="search" id="searchValue2" class="search-input" autocomplete="off">
                         <img class="location-icon" src="{{ asset('img/loc-icon.svg') }}">
                     </form>
                     <button id="search2" class="btn btn-blue">Search</button>
                 </div>
                 @if (count($kosts) > 0)
                 <div class="list-title mb-2" style="color: grey">
-                    Ditemukan {{count($kosts)}} kos-kosan di sekitar <span id="searchName">Menteng</span>
+                   {{Request::input('searchValue2') }} Ditemukan {{count($kosts)}} kos-kosan di sekitar <span id="searchName">Menteng</span>
                 </div>
                 @else
                 <div class="list-title mb-2" style="color: grey">
@@ -20,6 +20,8 @@
                 </div>
                 @endif
             </div>
+            <div id="map" class="my-4" style="height: 25vw; border-radius:20px"></div>
+
             <div class="search-content">
                 <div class="row">
                     @if (count($kosts) > 0)
@@ -33,7 +35,7 @@
                                 <div class="kost-info">
                                     <div class="d-flex flex-column">
                                         <span>{{$kost->kost_title}}</span>
-                                        <span><b>{{$kost->kost_city}}</b></span>
+                                        <span><b>{{$kost->kost_subdistrict}}, {{$kost->kost_city}}</b></span>
                                     </div>
                                 </div>
                                 <div class="kost-facilities">

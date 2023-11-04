@@ -6,7 +6,7 @@
                     <p>Don’t worry, you will find your beloved space
                         here, we search it for you</p>
                     <form class="search-form mt-5 mb-3">
-                        <input type="search" value="" placeholder="Location" id="searchValue" class="search-input">
+                        <input type="search" value="" placeholder="Location" id="searchValue" class="search-input" autocomplete="off">
                         <img class="location-icon" src="img/loc-icon.svg">
                     </form>
                     <button id="search" type="submit" class="btn btn-blue">Search</button>
@@ -50,7 +50,7 @@
                         <div class="carousel-inner" role="listbox">
                             @if (count($kosts) > 0)
                             @foreach ($kosts as $kost)
-                            <div class="carousel-item active">
+                            <div class="carousel-item @if ($loop->first) active @endif">
                                 <div class="col-md-3">
                                     <div class="card-kost mb-4" onclick="window.location='{{ url("/kost-detail/$kost->id") }}'">
                                         <div class="card-img">
@@ -60,7 +60,7 @@
                                             <div class="kost-info">
                                                 <div class="d-flex flex-column">
                                                     <span>{{$kost->kost_title}}</span>
-                                                    <span><b>{{$kost->kost_city}}</b></span>
+                                                    <span><b>{{$kost->kost_subdistrict}}, {{$kost->kost_city}}</b></span>
                                                 </div>
                                             </div>
                                             <div class="kost-facilities">

@@ -12,12 +12,14 @@ use App\Models\Kost;
 use App\Http\Requests\Kost\StoreRequest;
 use App\Http\Requests\Kost\UpdateRequest;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Auth;
 
 class KostController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+
     public function index(): Response
     {
         return response()->view('kosts.index', [
@@ -56,8 +58,9 @@ class KostController extends Controller
      */
     public function store(StoreRequest $request): RedirectResponse
     {
+        $user = Auth::user();
         $validated = $request->validated();
-
+        $validated[ 'user_id' ] = $user->id;
         if ($request->hasFile('thumbnail_image')) {
              // put image in the public storage
             $filePath = Storage::disk('public')->put('images/kosts/thumbnail-images', request()->file('thumbnail_image'));

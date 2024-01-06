@@ -48,7 +48,7 @@
 								</li> --}}
                                 @if (Auth::user()?->name)
                                 <li class="nav-item no-border ps-4 ps-md-0 ms-0 ms-md-4 me-md-4 ">
-									<button class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="img/profile.svg" height="30px" class="me-2">{{ Auth::user()?->name }}</button>
+									<button class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="{{ url("img/profile.svg") }}" height="30px" class="me-2">{{ Auth::user()?->name }}</button>
 									<div class="dropdown-menu dropdown-menu-end dropdown-menu-sm-start" >
 
                                         <form method="POST" action="{{ route('logout') }}">
@@ -81,13 +81,13 @@
     <footer>
         <div class="container m-auto row" style="text-align: -webkit-center;">
             <div class="col-sm-12 col-md-3" style=" align-self: center;   ">
-                <a class="navbar-brand" style="display: block;width: fit-content;" href="{{ url('/') }}"><img src="img/logo.svg" width="95px" alt=""></a>
+                <a class="navbar-brand" style="display: block;width: fit-content;" href="{{ url('/') }}"><img src="{{url('img/logo.svg')}}" width="95px" alt=""></a>
             </div>
             <div class="col-sm-12 col-md-3">
                 <div class="label-footer">Get our best offer</div>
                 <form class="search-form mt-2 mb-3">
                     <input type="search" value="" placeholder="Email" style="width: 80% !Important" class="search-input">
-                    <a href="#"><img class="subscribe-icon" src="img/subscribe.svg"></a>
+                    <a href="#"><img class="subscribe-icon" src="{{ url('img/subscribe.svg') }}"></a>
                 </form>
             </div>
             <div class="col-sm-12 col-md-3">
@@ -139,10 +139,12 @@
       </div>
     </div>
   </div>
+
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/tomickigrzegorz/autocomplete@1.8.6/dist/js/autocomplete.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="{{ asset('js/maps.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
 

@@ -14,7 +14,7 @@
             </div>
             <div class="mt-2">
                 <!-- State cards -->
-                <div class="grid grid-cols-1 gap-8 p-4 lg:grid-cols-2 xl:grid-cols-4">
+                <div class="grid grid-cols-1 gap-8 p-4 lg:grid-cols-2 xl:grid-cols-4" style="display: none">
                   <!-- Value card -->
                   <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
                     <div>
@@ -97,7 +97,7 @@
                 </div>
 
                 <!-- Charts -->
-                <div class="grid grid-cols-1 p-4 space-y-8 lg:gap-8 lg:space-y-0 lg:grid-cols-3">
+                <div class="grid grid-cols-1 p-4 space-y-8 lg:gap-8 lg:space-y-0 lg:grid-cols-3" style="display: none">
                   <!-- Bar chart card -->
                   <div class="col-span-2 bg-white rounded-md dark:bg-darker" x-data="{ isOn: false }">
                     <!-- Card header -->

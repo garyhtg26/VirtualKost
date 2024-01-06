@@ -17,7 +17,8 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const DASHBOARD = '/dashboard';
+    // public const DASHBOARD = '/dashboard';
+    public const DASHBOARD = '/kosts';
     public const HOME = '/';
     protected $namespace = 'App\Http\Controllers';
 

@@ -8,7 +8,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg m-auto" style="width: 50%;">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg m-auto w-50">
                 <div class="p-6 text-gray-900">
                     {{-- don't forget to add multipart/form-data so we can accept file in our form --}}
                     <form method="post" action="{{ isset($kost) ? route('kosts.update', $kost->id) : route('kosts.store') }}" class="mt-6 space-y-6" enctype="multipart/form-data">
@@ -65,8 +65,11 @@
 
                         <div>
                             <x-input-label for="virtual_embed" value="Embed Virtual 360 (*html)" />
-                            <x-text-input id="virtual_embed" placeholder="cth. <div><script></script></div>" name="virtual_embed" type="text" class="mt-1 block w-full" :value="$kost->virtual_embed ?? old('virtual_embed')" required autofocus />
+                            <x-text-input id="virtual_embed" placeholder="cth. <div><script></script></div>" name="virtual_embed" type="text" class="mt-1 block w-full" :value="$kost->virtual_embed ?? old('virtual_embed')" autofocus />
                             <x-input-error class="mt-2" :messages="$errors->get('virtual_embed')" />
+                            <div class="my-2">
+                                <a style=" color: cornflowerblue;" target="_blank" href="https://wa.me/6281383316920?text=Saya%20butuh%20bantuan%20memasang%20embed%20virtual%20360;">butuh bantuan?</a>
+                            </div>
                         </div>
                         <div>
                             <x-input-label for="gmaps_location" value="Link Gmaps Location" />

@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class RegisteredUserController extends Controller
 {
@@ -21,6 +22,7 @@ class RegisteredUserController extends Controller
     public function create(): View
     {
         return view('auth.register');
+        ;
     }
 
     /**
@@ -32,40 +34,50 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
+            'number' => ['required', 'string', 'max:20'],
+            'role' => ['integer', 'max:1'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $user = User::create([
             'name' => $request->name,
+            'number' => $request->number,
+            'role' => $request->role,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
         event(new Registered($user));
 
-        Auth::login($user);
+        //  Auth::login($user);
+        // session()->flash('notif.success', 'Register success! Please Login');
+         Alert::success('Register success!', 'Your Account has been created, Please Login');
 
-        return redirect(RouteServiceProvider::HOME);
+         return redirect()->to('/login');
+        // return redirect(RouteServiceProvider::HOME);
     }
     public function storeDashboard(Request $request): RedirectResponse
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
+            'number' => ['required', 'string', 'max:20'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $user = User::create([
             'name' => $request->name,
+            'number' => $request->number,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
         event(new Registered($user));
 
-        Auth::login($user);
-
-        return redirect(RouteServiceProvider::DASHBOARD);
+        // Auth::login($user);
+        //session()->flash('notif.success', 'Register success! Please Login');
+        Alert::success('Register success!', 'Your Account has been created, Please Login');
+        return redirect()->to('/login-dashboard');
     }
 }

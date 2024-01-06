@@ -24,10 +24,16 @@
                 </a>
             </div>
             <h2 class="title">{{ Request::routeIs('register') ? 'Register' : 'Login' }} Pemilik Kost</h2>
-
+            @if (Session::has('notif.success'))
+                    <div class="bg-blue-300 mt-2 p-4 rounded-md">
+                        {{-- if it's there then print the notification --}}
+                        <span class="text-white">{{ Session::get('notif.success') }}</span>
+                    </div>
+            @endif
             <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
                 {{ $slot }}
             </div>
         </div>
+        @include('sweetalert::alert')
     </body>
 </html>

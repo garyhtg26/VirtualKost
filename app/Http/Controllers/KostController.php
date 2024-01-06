@@ -22,9 +22,16 @@ class KostController extends Controller
 
     public function index(): Response
     {
-        return response()->view('kosts.index', [
-            'kosts' => Kost::orderBy('updated_at', 'desc')->get(),
-        ]);
+        if (Auth::user()->role == 1){
+            return response()->view('kosts.index', [
+                'kosts' => Kost::orderBy('updated_at', 'desc')->get(),
+            ]);
+        } else {
+            return response()->view('kosts.index', [
+                'kosts' => Kost::orderBy('updated_at', 'desc')->where('user_id', '=', Auth::user()->id)->get(),
+            ]);
+        }
+
     }
 
     public function search(): Response
@@ -42,7 +49,8 @@ class KostController extends Controller
     public function detail(string $id)
     {
         return response()->view('components.detail-kost', [
-            'kost' => Kost::findOrFail($id),
+            // 'kost' => Kost::findOrFail($id),
+            'kost' => Kost::with('user')->where('id','=',$id)->first()
         ]);
     }
     /**

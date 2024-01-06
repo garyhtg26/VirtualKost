@@ -21,14 +21,14 @@
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
                                                 data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                                Kebijakan Privasi VirtualKost?
+                                                Apa itu VirtualKost?
                                             </button>
                                         </h5>
                                     </div>
 
                                     <div id="collapseOne" class="collapse" data-parent="#accordionExample">
                                         <div class="card-body">
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.
+                                            VirtualKost adalah portal penyewaan kost modern yang mempermudah pencarian dan pemesanan kost secara online. Temukan kost ideal Anda dengan mudah melalui fitur pencarian canggih, dan jelajahi deskripsi lengkap serta galeri foto untuk setiap properti. Proses pemesanan yang sederhana, ulasan dari penghuni sebelumnya, dan dukungan pelanggan 24/7 memastikan pengalaman menyewa yang lancar dan aman. Segera temukan kenyamanan tinggal di VirtualKost, platform yang membawa pengalaman menyewa kost ke tingkat berikutnya.
                                         </div>
                                     </div>
                                 </div>
@@ -38,7 +38,7 @@
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
                                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                Cara mengajukan sewa di VirtualKost?
+                                                Cara mengajukan sewa/transaksi di VirtualKost?
                                             </button>
                                         </h5>
                                     </div>
@@ -121,7 +121,7 @@
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
                                                 data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapseThree">
-                                                Mengapa percakapan saya dengan pemilik kost di chat hilang?
+                                                Kebijakan Privasi VirtualKost?
                                             </button>
                                         </h5>
                                     </div>

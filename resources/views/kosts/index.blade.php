@@ -25,7 +25,8 @@
                             </tr>
                         </thead>
                         <tbody class="bg-white">
-                            {{-- populate our post data --}}
+                            {{-- populate our kost data --}}
+                            @if (count($kosts) > 0)
                             @foreach ($kosts as $kost)
                                 <tr>
                                     <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">{{ $kost->kost_title }}</td>
@@ -45,6 +46,16 @@
                                     </td>
                                 </tr>
                             @endforeach
+                            @else
+                            <tr>
+                                <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400" colspan="100%">
+                                    <center>
+                                        <div><img src="img/empty.svg" width="5%"></div>
+                                        <p class="mt-2">Tidak ditemukan kost</p>
+                                    </center>
+                                </td>
+                            </tr>
+                            @endif
                         </tbody>
                     </table>
                 </div>

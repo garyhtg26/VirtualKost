@@ -28,7 +28,7 @@ class StoreRequest extends FormRequest
             'kost_province' => 'required|string|min:1|max:255',
             'kost_price' => 'required|integer',
             'kost_facilities' => 'required|string|min:1|max:60000',
-            'virtual_embed' => 'required|string|min:1|max:60000',
+            'virtual_embed' => 'max:60000',
             'gmaps_location' => 'required|string|min:1|max:60000',
             'latitude'=> 'required',
             'longitude'=> 'required',

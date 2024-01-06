@@ -6,9 +6,9 @@
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="/">Home</a></li>
                   <li class="breadcrumb-item"><a href="/search">Search</a></li>
-                  <li class="breadcrumb-item"><a href="#">Jakarta Pusat</a></li>
-                  <li class="breadcrumb-item"><a href="#">Menteng</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Kost Andromeda</li>
+                  <li class="breadcrumb-item"><a href="#">{{$kost->kost_city}}</a></li>
+                  <li class="breadcrumb-item"><a href="#">{{$kost->kost_subdistrict}}</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">{{$kost->kost_title}}</li>
                 </ol>
               </nav>
               <div class="row mt-4">
@@ -52,14 +52,26 @@
                                 </ul>
                             </div>
                             <div class="kost-detail-button d-flex mt-5">
-                              <button class="btn btn-blue me-2">book</button>
-                              <button class="btn btn-white mt-2">See More</button>
+                                @if ( Auth::check() )
+                                    <button onclick="location.href='https://wa.me/{{$kost->user->number}}?text=Saya%20tertarik%20untuk%20menyewa%20kost%20ini';" class="btn btn-blue me-2">book</button>
+                                @else
+                                    <button onclick="location.href='/login';" class="btn btn-blue me-2">book</button>
+                                @endif
+                              {{-- <button onclick="location.href='/search';" class="btn btn-white mt-2">See More</button> --}}
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         {{-- <div id="sSeajnM1P"><script type="text/javascript" async data-short="sSeajnM1P" data-path="tours" data-is-self-hosted="false" width="100%" height="500px" src="https://app.cloudpano.com/public/shareScript.js"></script></div> --}}
-                        <div id="MMqLrAhy2oN"><script type="text/javascript" async data-short="MMqLrAhy2oN" data-path="tours" data-is-self-hosted="false" width="100%" height="500px" src="https://app.cloudpano.com/public/shareScript.js"></script></div>
+                        {{-- <div id="MMqLrAhy2oN"><script type="text/javascript" async data-short="MMqLrAhy2oN" data-path="tours" data-is-self-hosted="false" width="100%" height="500px" src="https://app.cloudpano.com/public/shareScript.js"></script></div> --}}
+                        @if ($kost->virtual_embed)
+                            {!!$kost->virtual_embed!!}
+                        @else
+                            <div class="card-img" style="max-height: max-content;">
+                                <img src="{{ isset($kost) ? Storage::url($kost->thumbnail_image) : '' }}" class="img-fluid">
+                                <div class="img-text-center">Virtual 360 Not Available</div>
+                            </div>
+                        @endif
                     </div>
               </div>
         </div>

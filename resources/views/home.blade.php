@@ -20,20 +20,20 @@
         <section id="about">
             <div class="container m-auto row">
                 <div class="container-video col-md-7 col-sm-12">
-                    <iframe class="youtube" src="https://www.youtube.com/embed/O2bGe7xE0kc" title="UNREAL ENGINE 5 Interior Animation | SPRING VIBES by PAUL LAPIN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="youtube" src="https://www.youtube.com/embed/bQp9rUtZc3Y?si=REZXdnTyEU8rP0qt" title="Apa itu VirtualKost" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div class="container-title col-md-5 col-sm-12">
                     <h1>Introducing
                         Virtual Kost </h1>
                     <p>Our App will show you how easy it is</p>
-                    <button class="btn btn-blue mt-4">Get Started</button>
+                    <button onclick="window.location='{{ route("help-center") }}'" class="btn btn-blue mt-4">Get Started</button>
                 </div>
             </div>
         </section>
         <section id="product">
             <div class="container">
                 <div class="d-flex" style="justify-content: space-between;">
-                    <div class="ms-2">Recommendation: <b>Monas</b></div>
+                    <div class="ms-2">Recommendation: <b>Universitas Riau</b></div>
                     <div class="d-flex" style="gap: 10px; margin-right:5%">
                         <a class="carousel-control-prev bg-transparent w-aut slider-nav" href="#recipeCarousel" role="button" data-bs-slide="prev">
                             <img src="img/arrow-left.svg">
